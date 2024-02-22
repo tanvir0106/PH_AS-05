@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louhojang Poribohon</title>
+    <link rel="stylesheet" href="./app.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    textColor: ['disabled'],
+                    colors: {
+                        clifford: "#da373d",
+                        "theme-color": "#1DD100",
+                        "p-color": "#03071299",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="max-w-[1400px]">
+    <header>
+        <!-- navbar start -->
+        <div class="container mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <h1 class=" text-3xl raleway-extrabold text-[#030712]">Louhojang Poribohon</h1>
+                </div>
+                <div class="navbar-center hidden lg:flex raleway-semibold text-xs text-[#030712B3]">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <button class="btn text-theme-color raleway-bold bg-[#1dd1001A] border-[#1dd10066]">
+                        Bus
+                        <img src="./images/bus-icon.png" alt="" srcset="" />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+
+        <!-- banner start -->
+
+        <div class="container mx-auto my-8">
+            <div class="hero min-h-screen relative" style="background-image: url(images/banner.png)">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">
+                            End-to-End Travel with
+                            <span class="text-theme-color">Louhojang Poribohon</span>
+                        </h1>
+                        <p class="mb-5 text-white">
+                            Louhojang Poribohon is apparently a family owned transport company specializing in
+                            transportation of passenger bus services since 1990
+                        </p>
+                        <button onclick="mainSection()" id="buy-ticket"
+                            class="btn text-black bg-theme-color raleway-bold">
+                            Buy Tickets
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- banner end -->
+    </header>
+
+    <main>
+        <!-- best offers -->
+        <div class="container mx-auto my-8">
+            <div class="text-center mb-10">
+                <h1 class="font-extrabold text-4xl">Best offers for you</h1>
+
+            </div>
+            <div class="">
+                <div class="flex gap-2 justify-between">
+                    <div class="card  flex-1 bg-[#FFBF0F] shadow-xl">
+                        <div class="card-body">
+                            <div class="card-actions flex items-center justify-center">
+
+                                <div>
+                                    <p class="text-4xl raleway-black">15% OFF</p>
+                                    <p class="text-[#030712B3]">on your next purchase</p>
+                                    <p class="text-[#030712B3]">use by January 2024</p>
+                                </div>
+                                <img src="./images/cupon-devider.png" alt="">
+                                <div>
+                                    <p class="text-xl raleway-extrabold">NEW15</p>
+                                    <p class="text-[#030712B3]">Coupon Code</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card flex-1 bg-[#F78C9C] shadow-xl">
+                        <div class="card-body">
+                            <div class="card-actions flex items-center justify-center">
+
+                                <div>
+                                    <p class="text-4xl raleway-black">20% OFF</p>
+                                    <p class="text-[#030712B3]">on your next purchase</p>
+                                    <p class="text-[#030712B3]">use by January 2024</p>
+                                </div>
+                                <img src="./images/cupon-devider.png" alt="">
+                                <div>
+                                    <p class="text-xl raleway-extrabold">Couple 20</p>
+                                    <p class="text-[#030712B3]">Coupon Code</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <button class="btn text-theme-color raleway-bold bg-white border-[#1dd10066]">See All Offers</button>
+
+            </div>
+        </div>
+        <!-- best offers -->
+
+        <!-- main section start -->
+        <div id="main-section" class="bg-[#F7F8F8] border-t-2 rounded-t-xl border-theme-color">
+            <div class="container mx-auto my-8 ">
+                <!-- text part -->
+                <div class="mt-5 text-center">
+                    <p class="text-3xl raleway-extrabold text-[#030712]">Louhojang Poribohon</p>
+                    <p class="mt-2">Louhojang Poribohon is apparently a family owned transport company specializing in
+                        <br> transportation of passenger bus services since 1990
+                    </p>
+                </div>
+                <!-- text part -->
+                <!-- ticket part -->
+                <div class="container mt-5 mx-auto">
+                    <div class="flex justify-center mx-auto bg-white rounded">
+                        <!-- 1st -->
+                        <div class="pt-12 ">
+                            <div class="flex justify-between gap-5 mb-4">
+                                <div class="flex gap-1 ">
+                                    <img src="./images/bus-logo.png" alt="" srcset="">
+                                    <div>
+                                        <h1 class="raleway-bold text-xl">Louhojang Poribohon</h1>
+                                        <h2 class="text-p-color">Coach-009-WEB ! AC_Business</h2>
+                                    </div>
+                                </div>
+                                <button class="bg-[#1dd1001A] rounded p-2">
+                                    <div class="flex gap-1 items-center">
+                                        <img src="./images/seat-green.png" alt="">
+                                        <span id="seat-available" class="text-theme-color">32</span>
+                                        <p class="text-theme-color">Seats</p>
+
+                                    </div>
+                                </button>
+                            </div>
+                            <div>
+                                <div class="divide-y divide-dashed bg-slate-100 p-2 rounded space-y-2">
+                                    <div class="flex justify-between">
+                                        <p class="text-p-color">Rounte</p>
+                                        <p class="raleway-bold text-lg">Dhaka - Louhojang</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-p-color">Departure Time</p>
+                                        <p class="raleway-bold text-lg">9.00 PM</p>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-center gap-4 ">
+                                            <button class="btn btn-active">Boarding Point - Mawya</button>
+                                            <button class="btn btn-active">Dropping Point - Bazar</button>
+                                            <button class="btn btn-active">Est. Time - 11 Hour</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1st -->
+                        <!-- 2nd -->
+                        <div>
+                            <img src="./images/info-devider.png" alt="">
+                        </div>
+                        <div class="pt-12 mt-12">
+                            <div class="text-center space-y-1">
+                                <div class="mx-auto">
+                                    <img src="./images/fare.png" alt="">
+                                </div>
+                                <h1 class="raleway-extrabold text-xl">550TAKA</h1>
+                                <p class="text-p-color">per seat</p>
+                            </div>
+                        </div>
+
+                        <!-- 2nd -->
+                    </div>
+                </div>
+                <!-- ticket part -->
+                <!-- functional part start -->
+                <div class="container mt-5 mx-auto">
+                    <div
+                        class="bg-white rounded grid grid-cols-2  divide-x-2 divide-dashed divide-green-100 p-5 space-x-2">
+                        <!-- 1st part -->
+                        <div class="">
+                            <div class="space-y-2 divide-y-2 divide-dashed divide-green-100">
+                                <h1 class="raleway-bold text-lg">Select Your Seat</h1>
+                                <div class="flex justify-between pr-2">
+                                    <div class="flex gap-1">
+                                        <img src="./images/seat-gray.png" alt="">
+                                        <p class="text-p-color">Available</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <img src="./images/seat-green.png" alt="">
+                                        <p class="text-theme-color">Selected</p>
+                                    </div>
+                                </div>
+                                <div class="text-end pr-2 ">
+                                    <button class="bg-slate-300 rounded btn"><img
+                                            src="./images/tabler-icon-steering-wheel.png" alt=""></button>
+                                </div>
+
+
+                            </div>
+                            <!-- seat -->
+                            <div id="seat-number" class="mt-2 grid grid-cols-4 grid-rows-3 gap-3">
+
+                                <button id="A1" class="btn btn-active">A1</button>
+                                <button id="A2" class="btn btn-active">A2</button>
+                                <button id="A3" class="btn btn-active">A3</button>
+                                <button id="A4" class="btn btn-active">A4</button>
+                                <button id="B1" class="btn btn-active">B1</button>
+                                <button id="B2" class="btn btn-active">B2</button>
+                                <button id="B3" class="btn btn-active">B3</button>
+                                <button id="B4" class="btn btn-active">B4</button>
+                                <button id="C1" class="btn btn-active">C1</button>
+                                <button id="C2" class="btn btn-active">C2</button>
+                                <button id="C3" class="btn btn-active">C3</button>
+                                <button id="C4" class="btn btn-active">C4</button>
+                                <button id="D1" class="btn btn-active">D1</button>
+                                <button id="D2" class="btn btn-active">D2</button>
+                                <button id="D3" class="btn btn-active">D3</button>
+                                <button id="D4" class="btn btn-active">D4</button>
+                                <button id="E1" class="btn btn-active">E1</button>
+                                <button id="E2" class="btn btn-active">E2</button>
+                                <button id="E3" class="btn btn-active">E3</button>
+                                <button id="E4" class="btn btn-active">E4</button>
+                                <button id="F1" class="btn btn-active">F1</button>
+                                <button id="F2" class="btn btn-active">F2</button>
+                                <button id="F3" class="btn btn-active">F3</button>
+                                <button id="F4" class="btn btn-active">F4</button>
+                                <button id="G1" class="btn btn-active">G1</button>
+                                <button id="G2" class="btn btn-active">G2</button>
+                                <button id="G3" class="btn btn-active">G3</button>
+                                <button id="G4" class="btn btn-active">G4</button>
+                                <button id="H1" class="btn btn-active">H1</button>
+                                <button id="H2" class="btn btn-active">H2</button>
+                                <button id="H3" class="btn btn-active">H3</button>
+                                <button id="H4" class="btn btn-active">H4</button>
+
+                            </div>
+                            <!-- seat -->
+                        </div>
+                        <!-- 1st part -->
+                        <!-- 2nd part -->
+                        <div>
+                            <div class="space-y-2 divide-y-2 divide-dashed divide-green-100 pl-5 ">
+                                <h1 class="raleway-bold text-lg">Select Your Seat</h1>
+                                <div class="bg-slate-100 rounded-lg">
+                                    <div class="overflow-x-auto">
+                                        <table id="table" class="table">
+                                            <!-- head -->
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th class="raleway-bold text-black">Seat <span id="add-seat"
+                                                            class="bg-theme-color rounded text-white p-2">0</span></th>
+                                                    <th class="raleway-bold text-black">Class</th>
+                                                    <th class="raleway-bold text-black">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Total price</th>
+                                                    <th></th>
+                                                    <td>BDT <span id="total-price">0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Discount price</th>
+                                                    <th></th>
+                                                    <td>BDT <span id="discount-price">0</span></td>
+                                                </tr>
+                                                <tr id="cupon-section">
+
+                                                    <th></th>
+                                                    <td><input id="cupon-field" type="text" placeholder="enter cupon"
+                                                            class="input input-bordered w-full max-w-xs">
+                                                    </td>
+
+                                                    <td><button id="btn-apply" class="text-white bg-theme-color btn"
+                                                            disabled>apply</button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Grand price</th>
+                                                    <th></th>
+                                                    <td>BDT <span id="grand-price">0</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="pl-5 mt-2">
+                                <!-- 1t -->
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text raleway-bold ">Passenger Name*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your name"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <!-- 1t -->
+                                <!-- 2nd -->
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text raleway-bold">Phone Number*</span>
+                                    </div>
+                                    <input id="phone-number" type="number" placeholder="Enter your phone number"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <!-- 2nd -->
+                                <!-- 3rd -->
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text raleway-bold">Email ID</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your email id"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <!-- 3rd -->
+
+                            </div>
+                            <div class="pl-5 mt-2 text-center w-full">
+                                <button onclick="my_modal_1.showModal()" id="nextBtn"
+                                    class="btn bg-theme-color text-white rounded-xl w-full p-3 text-xl font-bold"
+                                    disabled>Next</button>
+
+                            </div>
+                            <div class="pl-5 mt-2 flex gap-4 justify-center">
+                                <p class="text-p-color">Terms and Conditions</p>
+                                <p class="text-p-color">Cancellation Policy</p>
+
+                            </div>
+                        </div>
+                        <!-- 2nd part -->
+
+                    </div>
+
+                </div>
+                <!-- functional part end -->
+
+            </div>
+        </div>
+        <!-- main section end -->
+    </main>
+
+
+    <footer class="footer p-10 bg-black  text-white">
+        <div class="container mx-auto my-8">
+            <div class="flex flex-col">
+                <div class="flex justify-between gap-10">
+                    <div class="space-y-3">
+                        <h1 class=" text-3xl raleway-extrabold ">Louhojang Poribohon</h1>
+                        <p>Louhojang Poribohon is a digital platform to
+                            make your <br>daily commuting better.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h6 class="text-xl text-white raleway-medium">Download our app</h6>
+                        <img src="./images/Group-04.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div>
+                    ------------------------------------------------------------------------------------------------------------------------------------------------------
+                    ------------------------------------------------------------</div>
+                <div class="flex justify-between gap-10">
+                    <p class="justify-start">@all rights reserved, Louhojang Poribohon services limited.2024</p>
+                    <div class="flex gap-6 justify-end">
+                        <p>Terms & condition</p>
+                        <p>Return & refund policy</p>
+                        <p>Privacy policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- --------------------------------------------------------- -->
+
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box text-center">
+            <div><img class="mx-auto " src="./images/success.png" alt=""></div>
+            <h3 class="font-bold text-lg text-[#27AE60]">SUCCESS</h3>
+            <p class="py-4">Thank you for Booking Our Bus Seats.
+                We are working hard to find the best service and deals for you</p>
+            <p>Shortly you will find a confirmation in your email.</p>
+            <div class="modal-action">
+                <form method="dialog">
+
+                    <button class="btn bg-[#27AE60] text-white mx-auto text-center">Continue</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
